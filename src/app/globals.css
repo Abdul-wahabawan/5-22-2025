@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  /* background:#e3f8ff; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.imgbox
+  {
+    @apply w-[362px] h-[362px] md:w-[340px] md:h-[460px] lg:w-[340px] lg:h-[460px] xl:w-[340px] xl:h-[460px] object-cover 
+
+  }
+
+  
+  @keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scrollLeft {
+  animation: scrollLeft 16s linear infinite;
+}
+
+.scroll-track {
+  width: 200%;
+}
